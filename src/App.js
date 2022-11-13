@@ -1,13 +1,11 @@
 import Login from "./components/Login";
+import Logout from "./components/Logout";
+import { useSelector } from "react-redux";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Login />
-      </header>
-    </div>
-  );
+  const user = useSelector((state) => state.user.user);
+
+  return <div className="App">{user ? <Logout /> : <Login />}</div>;
 }
 
 export default App;
