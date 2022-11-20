@@ -11,7 +11,7 @@ export default function Logout() {
     e.preventDefault();
     dispatch(logout());
   };
-
+  console.log(user);
   return (
     <div className="container">
       <h1>Welcome:</h1>
